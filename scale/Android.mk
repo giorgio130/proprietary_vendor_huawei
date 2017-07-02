@@ -19,4 +19,104 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),scale)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libhuawei_secure
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/lib/libhuawei_secure.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqmi_oem_api
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/lib/libqmi_oem_api.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libtime_genoff
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/vendor/lib/libtime_genoff.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := liboeminfo_oem_api
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/lib/liboeminfo_oem_api.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+
+ifeq ($(QCPATH),)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := shutdownlistener
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/app/shutdownlistener/shutdownlistener.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := qcrilmsgtunnel
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libloc_api_v02
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/lib/libloc_api_v02.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libloc_ds_api
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/lib/libloc_ds_api.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := TimeService
+LOCAL_MODULE_OWNER := huawei
+LOCAL_SRC_FILES := ../msm8916-common/proprietary/app/TimeService/TimeService.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+include $(BUILD_PREBUILT)
+
+endif
+
 endif

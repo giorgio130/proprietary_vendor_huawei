@@ -26,6 +26,8 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/scale/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt \
     vendor/huawei/scale/proprietary/lib/libdmd_report.so:system/lib/libdmd_report.so \
     vendor/huawei/scale/proprietary/vendor/lib/libacdbloader.so:system/vendor/lib/libacdbloader.so \
+    vendor/huawei/scale/proprietary/lib/libqdMetaData.so:system/lib/libqdMetaData.so \
+    vendor/huawei/scale/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
     vendor/huawei/scale/proprietary/vendor/lib/libactuator_dw9714.so:system/vendor/lib/libactuator_dw9714.so \
     vendor/huawei/scale/proprietary/vendor/lib/libactuator_dw9714_13p1ba.so:system/vendor/lib/libactuator_dw9714_13p1ba.so \
     vendor/huawei/scale/proprietary/vendor/lib/libactuator_dw9714_13p1ba_camcorder.so:system/vendor/lib/libactuator_dw9714_13p1ba_camcorder.so \
